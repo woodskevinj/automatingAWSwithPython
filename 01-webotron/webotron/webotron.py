@@ -19,7 +19,7 @@ def list_buckets():
 @click.argument('bucket')
 def list_bucket_objects(bucket):
     "List objects in an s3 bucket"
-    for obj in s3.Bucket('bucket').objects.all():
+    for obj in s3.Bucket(bucket).objects.all():
         print(obj)
 
 if __name__ == '__main__':
